@@ -1,0 +1,452 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="it">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Innovazione Sonora | Progetti per le Scuole e le Istituzioni</title>\
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">\
+    <script src="https://unpkg.com/lucide@latest"></script>\
+    <style>\
+        :root \{\
+            --bg-deep: #020617;\
+            --surface: #0f172a;\
+            --accent: #0ea5e9; \
+            --accent-glow: rgba(14, 165, 233, 0.4);\
+            --text-primary: #f8fafc;\
+            --text-secondary: #cbd5e1; /* Leggermente pi\'f9 chiaro per accessibilit\'e0 */\
+            --border-ui: rgba(226, 232, 240, 0.1);\
+            --success: #10b981;\
+        \}\
+\
+        /* Reset e Base */\
+        * \{ box-sizing: border-box; \}\
+        html \{ scroll-behavior: smooth; \}\
+\
+        body \{\
+            background-color: var(--bg-deep);\
+            color: var(--text-primary);\
+            font-family: 'Inter', sans-serif;\
+            margin: 0;\
+            line-height: 1.7;\
+            overflow-x: hidden;\
+        \}\
+\
+        /* Sfondo Tecnologico */\
+        .tech-grid \{\
+            position: fixed;\
+            top: 0; left: 0; width: 100%; height: 100%;\
+            background-image: \
+                linear-gradient(rgba(14, 165, 233, 0.03) 1px, transparent 1px),\
+                linear-gradient(90deg, rgba(14, 165, 233, 0.03) 1px, transparent 1px);\
+            background-size: 50px 50px;\
+            z-index: -1;\
+        \}\
+\
+        /* Header */\
+        header \{\
+            padding: 120px 24px 80px;\
+            text-align: center;\
+            background: radial-gradient(circle at top, rgba(14, 165, 233, 0.15), transparent);\
+            border-bottom: 1px solid var(--border-ui);\
+        \}\
+\
+        .eyebrow \{\
+            font-family: 'JetBrains Mono', monospace;\
+            color: var(--accent);\
+            text-transform: uppercase;\
+            letter-spacing: 4px;\
+            font-size: 0.85rem;\
+            display: block;\
+            margin-bottom: 15px;\
+        \}\
+\
+        h1 \{\
+            font-family: 'Orbitron', sans-serif;\
+            font-size: clamp(2rem, 5vw, 3.5rem);\
+            margin: 0 auto;\
+            max-width: 900px;\
+            line-height: 1.1;\
+            background: linear-gradient(180deg, #fff 30%, var(--text-secondary) 100%);\
+            -webkit-background-clip: text;\
+            -webkit-text-fill-color: transparent;\
+        \}\
+\
+        .header-sub \{\
+            color: var(--text-secondary);\
+            max-width: 600px;\
+            margin: 25px auto 0;\
+            font-size: 1.1rem;\
+        \}\
+\
+        .container \{\
+            max-width: 1100px;\
+            margin: 0 auto;\
+            padding: 80px 24px;\
+        \}\
+\
+        /* Layout Sezioni */\
+        section \{ margin-bottom: 100px; \}\
+\
+        .section-header \{ margin-bottom: 48px; \}\
+\
+        .section-header h2 \{\
+            font-family: 'Orbitron', sans-serif;\
+            font-size: 1.25rem;\
+            color: var(--accent);\
+            text-transform: uppercase;\
+            letter-spacing: 2px;\
+            display: flex;\
+            align-items: center;\
+            gap: 15px;\
+        \}\
+\
+        .section-header h2::after \{\
+            content: '';\
+            height: 1px;\
+            flex-grow: 1;\
+            background: linear-gradient(90deg, var(--border-ui), transparent);\
+        \}\
+\
+        /* Cards Moduli */\
+        .modules-grid \{\
+            display: grid;\
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\
+            gap: 30px;\
+        \}\
+\
+        .module-card \{\
+            background: var(--surface);\
+            border: 1px solid var(--border-ui);\
+            padding: 40px;\
+            border-radius: 12px;\
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;\
+            display: flex;\
+            flex-direction: column;\
+            height: 100%;\
+        \}\
+\
+        .module-card:hover \{\
+            transform: translateY(-5px);\
+            border-color: var(--accent);\
+            box-shadow: 0 10px 30px -10px var(--accent-glow);\
+        \}\
+\
+        .icon-box \{\
+            width: 56px;\
+            height: 56px;\
+            background: rgba(14, 165, 233, 0.1);\
+            border-radius: 12px;\
+            display: flex;\
+            align-items: center;\
+            justify-content: center;\
+            color: var(--accent);\
+            margin-bottom: 24px;\
+        \}\
+\
+        .skills-tag \{\
+            font-family: 'JetBrains Mono', monospace;\
+            font-size: 0.7rem;\
+            color: var(--accent);\
+            background: rgba(14, 165, 233, 0.05);\
+            padding: 4px 12px;\
+            border: 1px solid rgba(14, 165, 233, 0.2);\
+            border-radius: 20px;\
+            align-self: flex-start;\
+            margin-bottom: 15px;\
+        \}\
+\
+        .module-card h3 \{\
+            font-family: 'Orbitron', sans-serif;\
+            margin: 0 0 15px 0;\
+            font-size: 1.2rem;\
+        \}\
+\
+        .module-card p \{\
+            color: var(--text-secondary);\
+            font-size: 0.95rem;\
+            flex-grow: 1;\
+        \}\
+\
+        .target-label \{\
+            margin-top: 20px;\
+            font-size: 0.8rem;\
+            font-weight: 600;\
+            color: var(--accent);\
+            opacity: 0.8;\
+        \}\
+\
+        /* Metodologia */\
+        .method-block \{\
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(2, 6, 23, 1));\
+            border: 1px solid var(--border-ui);\
+            padding: 50px;\
+            border-radius: 16px;\
+        \}\
+\
+        .method-grid \{\
+            display: grid;\
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\
+            gap: 40px;\
+            margin-top: 40px;\
+        \}\
+\
+        .method-item h4 \{\
+            color: var(--accent);\
+            font-family: 'Orbitron', sans-serif;\
+            font-size: 0.9rem;\
+            margin-bottom: 12px;\
+        \}\
+\
+        /* Form Professionale */\
+        .form-container \{\
+            background: rgba(255, 255, 255, 0.02);\
+            border: 1px solid var(--border-ui);\
+            padding: clamp(20px, 5vw, 60px);\
+            border-radius: 16px;\
+        \}\
+\
+        .form-row \{\
+            display: grid;\
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\
+            gap: 25px;\
+            margin-bottom: 25px;\
+        \}\
+\
+        .form-group \{ margin-bottom: 20px; \}\
+\
+        label \{\
+            font-family: 'JetBrains Mono', monospace;\
+            font-size: 0.75rem;\
+            color: var(--accent);\
+            margin-bottom: 10px;\
+            display: block;\
+            text-transform: uppercase;\
+        \}\
+\
+        input, select, textarea \{\
+            width: 100%;\
+            background: rgba(0, 0, 0, 0.3);\
+            border: 1px solid var(--border-ui);\
+            padding: 16px;\
+            color: white;\
+            border-radius: 8px;\
+            font-family: 'Inter', sans-serif;\
+            transition: all 0.3s ease;\
+        \}\
+\
+        input:focus, select:focus, textarea:focus \{\
+            border-color: var(--accent);\
+            background: rgba(14, 165, 233, 0.05);\
+            outline: none;\
+            box-shadow: 0 0 15px var(--accent-glow);\
+        \}\
+\
+        .btn-submit \{\
+            background: var(--accent);\
+            color: white;\
+            border: none;\
+            padding: 20px 40px;\
+            font-family: 'Orbitron', sans-serif;\
+            font-weight: 700;\
+            text-transform: uppercase;\
+            letter-spacing: 2px;\
+            cursor: pointer;\
+            width: 100%;\
+            border-radius: 8px;\
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);\
+        \}\
+\
+        .btn-submit:hover \{\
+            transform: scale(1.02);\
+            box-shadow: 0 0 30px var(--accent-glow);\
+        \}\
+\
+        .btn-submit:active \{ transform: scale(0.98); \}\
+\
+        /* Footer */\
+        footer \{\
+            padding: 80px 24px;\
+            text-align: center;\
+            border-top: 1px solid var(--border-ui);\
+            color: var(--text-secondary);\
+        \}\
+\
+        .footer-tag \{\
+            font-family: 'JetBrains Mono', monospace;\
+            color: var(--accent);\
+            margin-bottom: 15px;\
+            font-size: 0.9rem;\
+        \}\
+\
+        @media (max-width: 768px) \{\
+            header \{ padding: 80px 24px 40px; \}\
+            .container \{ padding: 40px 24px; \}\
+            .method-block \{ padding: 30px; \}\
+        \}\
+    </style>\
+</head>\
+<body>\
+\
+<div class="tech-grid"></div>\
+\
+<header>\
+    <span class="eyebrow">Innovation & Education</span>\
+    <h1>Architetture del Suono</h1>\
+    <p class="header-sub">\
+        Percorsi formativi d'avanguardia per lo sviluppo di competenze digitali, creative e critiche attraverso il linguaggio sonoro.\
+    </p>\
+</header>\
+\
+<div class="container">\
+    \
+    <section id="offerta">\
+        <div class="section-header">\
+            <h2><i data-lucide="layers"></i> Offerta Formativa</h2>\
+        </div>\
+        \
+        <div class="modules-grid">\
+            <article class="module-card">\
+                <div class="icon-box"><i data-lucide="mic-2"></i></div>\
+                <span class="skills-tag">MEDIA LITERACY</span>\
+                <h3>Podcast & Storytelling</h3>\
+                <p>Sviluppo di competenze di scrittura creativa e sintesi informativa attraverso la produzione audio digitale.</p>\
+                <div class="target-label">Target: Secondarie I e II grado</div>\
+            </article>\
+\
+            <article class="module-card">\
+                <div class="icon-box"><i data-lucide="ear"></i></div>\
+                <span class="skills-tag">SOFT SKILLS</span>\
+                <h3>Deep Listening</h3>\
+                <p>Metodologie di ascolto attivo e consapevole per il benessere relazionale e la comprensione degli ecosistemi sonori.</p>\
+                <div class="target-label">Target: Docenti / Studenti</div>\
+            </article>\
+\
+            <article class="module-card">\
+                <div class="icon-box"><i data-lucide="binary"></i></div>\
+                <span class="skills-tag">STEAM</span>\
+                <h3>Digital Sound Design</h3>\
+                <p>Integrazione tra informatica, fisica acustica e arte. Creazione di paesaggi sonori e asset per media interattivi.</p>\
+                <div class="target-label">Target: PNRR / STEAM</div>\
+            </article>\
+        </div>\
+    </section>\
+\
+    <section class="method-block">\
+        <div class="section-header">\
+            <h2><i data-lucide="shield-check"></i> Metodologia Istituzionale</h2>\
+        </div>\
+        <p>\
+            Ogni laboratorio \'e8 progettato in linea con le competenze chiave europee e i quadri <strong>DigComp 2.2</strong>, garantendo una rendicontazione chiara per progetti finanziati.\
+        </p>\
+        \
+        <div class="method-grid">\
+            <div class="method-item">\
+                <h4>Approccio STEAM</h4>\
+                <p>Sinergia tra discipline scientifiche e umanistiche attraverso l'arte sonora.</p>\
+            </div>\
+            <div class="method-item">\
+                <h4>Apprendimento Esperienziale</h4>\
+                <p>Focus sul "Learning by doing" con strumenti tecnologici professionali.</p>\
+            </div>\
+            <div class="method-item">\
+                <h4>Inclusivit\'e0 Digitale</h4>\
+                <p>Percorsi adattivi per l'integrazione e il superamento del digital divide.</p>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <section class="form-container">\
+        <div class="section-header">\
+            <h2><i data-lucide="send"></i> Area Progettazione</h2>\
+            <p style="color: var(--text-secondary); margin-top: 10px;">Richiedi un prospetto dettagliato o una consulenza per la stesura di bandi.</p>\
+        </div>\
+\
+        <form id="contactForm">\
+            <div class="form-row">\
+                <div class="form-group">\
+                    <label for="ente">Ente / Istituto Scolastico</label>\
+                    <input type="text" id="ente" name="ente" placeholder="Nome completo dell'ente" required>\
+                </div>\
+                <div class="form-group">\
+                    <label for="referente">Tipologia di Referente</label>\
+                    <select id="referente" name="referente">\
+                        <option>Dirigente Scolastico</option>\
+                        <option>Animatore Digitale / Funzione Strumentale</option>\
+                        <option>Responsabile Ente/Fondazione</option>\
+                        <option>Altro</option>\
+                    </select>\
+                </div>\
+            </div>\
+\
+            <div class="form-row">\
+                <div class="form-group">\
+                    <label for="email">Email Istituzionale</label>\
+                    <input type="email" id="email" name="email" placeholder="nome@istituto.it" required>\
+                </div>\
+                <div class="form-group">\
+                    <label for="interesse">Interesse Principale</label>\
+                    <select id="interesse" name="interesse">\
+                        <option>Laboratorio per Studenti</option>\
+                        <option>Formazione Personale Docente</option>\
+                        <option>Consulenza Bandi (PNRR/PON)</option>\
+                        <option>Installazioni Multimediali</option>\
+                    </select>\
+                </div>\
+            </div>\
+\
+            <div class="form-group">\
+                <label for="messaggio">Dettagli del Progetto</label>\
+                <textarea id="messaggio" name="messaggio" rows="4" placeholder="Descriva brevemente le necessit\'e0..."></textarea>\
+            </div>\
+            \
+            <button type="submit" class="btn-submit" id="submitBtn">Invia Richiesta Professionale</button>\
+        </form>\
+    </section>\
+\
+</div>\
+\
+<footer>\
+    <div class="footer-tag">INNOVATION_NODE: ITALY_NORTH_EST</div>\
+    <div>Progettazione Multimediale & Sound Design per la Didattica 4.0</div>\
+    <div style="margin-top: 20px; opacity: 0.5; font-size: 0.75rem;">\'a9 2024 Sci-Fi Didactic Lab. Tutti i diritti riservati.</div>\
+</footer>\
+\
+<script>\
+    // Inizializzazione icone\
+    lucide.createIcons();\
+\
+    // Gestione Form migliorata\
+    const form = document.getElementById('contactForm');\
+    const btn = document.getElementById('submitBtn');\
+\
+    form.addEventListener('submit', function(e) \{\
+        e.preventDefault();\
+        \
+        const originalText = btn.innerHTML;\
+        btn.disabled = true;\
+        btn.innerHTML = "ELABORAZIONE...";\
+        \
+        // Simulazione invio\
+        setTimeout(() => \{\
+            btn.innerHTML = "MESSAGGIO INVIATO \uc0\u10003 ";\
+            btn.style.backgroundColor = "var(--success)";\
+            form.reset();\
+            \
+            setTimeout(() => \{\
+                btn.innerHTML = originalText;\
+                btn.style.backgroundColor = "";\
+                btn.disabled = false;\
+            \}, 3000);\
+        \}, 1200);\
+    \});\
+</script>\
+\
+</body>\
+</html>}
